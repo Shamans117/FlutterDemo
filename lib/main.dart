@@ -1,6 +1,20 @@
 import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_app/demo.dart';
+
+
+void main() => runApp(new MaterialApp(
+  title: 'Shopping App',
+  home:ShoppingList(
+    products: <Product>[
+      Product(name: 'Apple'),
+      Product(name:'Banana'),
+      Product(name:'Candy')
+    ],
+  )
+));
+
 
 class MyAppBar extends StatelessWidget {
   MyAppBar({this.title});
@@ -38,20 +52,21 @@ class MyScaffold extends StatelessWidget {
           new MyAppBar(
             title: new Text(
               'Example Title',
-              style: Theme.of(context).primaryTextTheme.title,
+              style: Theme
+                  .of(context)
+                  .primaryTextTheme
+                  .title,
             ),
           ),
           new Expanded(
               child: new Center(
-            child: new Text('Hello,World!'),
-          ))
+                child: new Text('Hello,World!'),
+              ))
         ],
       ),
     );
   }
 }
-
-void main() => runApp(new MaterialApp(title: 'My app', home: new MyButton()));
 
 class TutorialHome extends StatelessWidget {
   @override
@@ -77,18 +92,18 @@ class TutorialHome extends StatelessWidget {
   }
 }
 
-class MyButton extends StatelessWidget{
+class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new GestureDetector(
-      onTap: (){
+      onTap: () {
         print('MyButton was tapped');
       },
       child: new Container(
         height: 36,
         padding: const EdgeInsets.all(8.0),
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
-        decoration:new BoxDecoration(
+        decoration: new BoxDecoration(
           borderRadius: new BorderRadius.circular(3),
           color: Colors.lightGreen[500],
         ),
@@ -110,18 +125,18 @@ class MyButton extends StatelessWidget{
 //    ));
 //void main() => runApp(new MyApp());
 //
-//class MyApp extends StatelessWidget {
-//  // This widget is the root of your application.
-//  @override
-//  Widget build(BuildContext context) {
-//    return MaterialApp(
-//        title: 'My First Flutter App',
-//        theme: new ThemeData(
-//          primaryColor: Colors.white,
-//        ),
-//        home: new MyHomePage());
-//  }
-//}
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'My First Flutter App',
+        theme: new ThemeData(
+          primaryColor: Colors.white,
+        ),
+        home: MyButton());
+  }
+}
 //
 //class MyHomePage extends StatefulWidget {
 //  @override
