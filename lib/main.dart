@@ -2,18 +2,21 @@ import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter_app/demo.dart';
+import 'package:flutter_app/layout.dart' as layout;
 
+void main()=>runApp(layout.MyApp());
 
-void main() => runApp(new MaterialApp(
-  title: 'Shopping App',
-  home:ShoppingList(
-    products: <Product>[
-      Product(name: 'Apple'),
-      Product(name:'Banana'),
-      Product(name:'Candy')
-    ],
-  )
-));
+//
+//void main() => runApp(new MaterialApp(
+//  title: 'Shopping App',
+//  home:ShoppingList(
+//    products: <Product>[
+//      Product(name: 'Apple'),
+//      Product(name:'Banana'),
+//      Product(name:'Candy')
+//    ],
+//  )
+//));
 
 
 class MyAppBar extends StatelessWidget {
